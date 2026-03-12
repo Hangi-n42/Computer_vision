@@ -34,7 +34,7 @@
 
 ### 최종 결과물
 - 왜곡 보정 전/후 비교 이미지:
-  - `week2/results_calibration/undistort_comparison.jpg`
+  ![Image](https://github.com/user-attachments/assets/f2fe61e6-1210-4356-b401-a634b681e535)
 - 캘리브레이션 수치 결과(npz):
   - `week2/results_calibration/calibration_result.npz`
 - 콘솔 출력 결과:
@@ -258,15 +258,25 @@ print(f"\nSaved intermediate and final results to: {RESULT_DIR}")
 
 ### 중간 결과물
 - 회전 + 크기 조절 결과 이미지:
-    - `week2/results_rotation/rotated_scaled.jpg`
+   ![Image](https://github.com/user-attachments/assets/a06d119e-ecd3-484f-a30b-8298884e0efd)
 - 변환 행렬 정보 텍스트:
-    - `week2/results_rotation/transformation_matrices.txt`
+    - `Image size: 1188 x 792
+      Center: (594.0, 396.0)
+
+      Rotation matrix:
+      [[  0.69282032   0.4         24.06472812]
+       [ -0.4          0.69282032 359.24315208]]
+      
+      Transformation matrix:
+      [[  0.69282032   0.4        104.06472812]
+       [ -0.4          0.69282032 319.24315208]]
+      `
 
 ### 최종 결과물
 - 회전 + 크기 조절 + 평행이동 결과 이미지:
-    - `week2/results_rotation/rotated_scaled_translated.jpg`
+    ![Image](https://github.com/user-attachments/assets/fe4bb817-6756-4c40-9864-f403f1752752)
 - 원본 / 중간 / 최종 비교 이미지:
-    - `week2/results_rotation/rotation_comparison.jpg`
+    ![Image](https://github.com/user-attachments/assets/786462fd-6431-4f5d-985f-8a115b3f8b52)
 - 콘솔 출력 결과:
 ```text
 Input image: C:\Projects\Computer_vision\images\rose.png
@@ -408,19 +418,33 @@ print(f"\nSaved results to: {RESULT_DIR}")
 
 ### 중간 결과물
 - ROI가 표시된 좌측 이미지:
-  - `week2/results_depth/left_with_rois.png`
+
+  <img width="450" height="375" alt="Image" src="https://github.com/user-attachments/assets/3ff02b62-9f03-432b-bf3a-df37efd8aa8d" />
 - ROI가 표시된 우측 이미지:
-  - `week2/results_depth/right_with_rois.png`
+
+  <img width="450" height="375" alt="Image" src="https://github.com/user-attachments/assets/e6e080c9-73eb-4f49-b961-343b90f9fa8e" />
 - 컬러 disparity map:
-  - `week2/results_depth/disparity_map_color.png`
+
+  <img width="450" height="375" alt="Image" src="https://github.com/user-attachments/assets/6627cc70-67e5-463e-95d4-db68fec76e06" />
 - ROI별 수치 결과 텍스트:
-  - `week2/results_depth/roi_depth_results.txt`
+  - `Focal length (f): 700.0
+    Baseline (B): 0.12
+    
+    ROI Statistics:
+    Painting: mean disparity = 18.5413, mean depth = 4.5373 m, valid pixels = 9130
+    Frog: mean disparity = 33.6996, mean depth = 2.5056 m, valid pixels = 18115
+    Teddy: mean disparity = 22.4374, mean depth = 3.8561 m, valid pixels = 9170
+    
+    Nearest ROI: Frog
+    Farthest ROI: Painting`
 
 ### 최종 결과물
 - 컬러 depth map:
-  - `week2/results_depth/depth_map_color.png`
+
+  <img width="450" height="375" alt="Image" src="https://github.com/user-attachments/assets/b8b0d809-3170-4352-b5a3-f8fe24dc1807" />
 - 전체 요약 패널(좌측/우측/Disparity/Depth):
-  - `week2/results_depth/depth_summary_panel.png`
+
+  <img width="900" height="750" alt="Image" src="https://github.com/user-attachments/assets/acea50eb-811f-4c2b-8e64-5a3e6e8a9cf5" />
 - 콘솔 출력 결과:
 ```text
 Left image: C:\Projects\Computer_vision\images\left.png
