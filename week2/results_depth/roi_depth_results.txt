@@ -1,0 +1,12 @@
+Left image: C:\Projects\Computer_vision\images\left.png
+Right image: C:\Projects\Computer_vision\images\right.png
+Focal length (f): 700.0
+Baseline (B): 0.12
+
+ROI Statistics:
+Painting: mean disparity = 18.5413, mean depth = 4.5373 m, valid pixels = 9130
+Frog: mean disparity = 33.6996, mean depth = 2.5056 m, valid pixels = 18115
+Teddy: mean disparity = 22.4374, mean depth = 3.8561 m, valid pixels = 9170
+
+Nearest ROI: Frog
+Farthest ROI: Painting

@@ -20,6 +20,7 @@ def mouse_callback(event, x, y, flags, param):
         end_point = (x, y)
         
     elif event == cv.EVENT_MOUSEMOVE:
+        
         # 드래그 중 - 사각형 그리기
         if drawing:
             end_point = (x, y)

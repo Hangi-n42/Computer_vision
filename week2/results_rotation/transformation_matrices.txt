@@ -1,0 +1,11 @@
+Input image: C:\Projects\Computer_vision\images\rose.png
+Image size: 1188 x 792
+Center: (594.0, 396.0)
+
+Rotation matrix:
+[[  0.69282032   0.4         24.06472812]
+ [ -0.4          0.69282032 359.24315208]]
+
+Transformation matrix:
+[[  0.69282032   0.4        104.06472812]
+ [ -0.4          0.69282032 319.24315208]]
