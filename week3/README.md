@@ -9,15 +9,19 @@
 - Matplotlib로 원본 이미지와 에지 강도 이미지를 나란히 시각화한다.
 
 ### 중간 결과물
-- `week3/results_sobel/sobel_x_abs.png`
+- <img width="560" height="315" alt="Image" src="https://github.com/user-attachments/assets/02996862-65e3-4f1a-b2c0-3b7dde4aa569" />
+
   - x축 방향 소벨 결과(세로 경계에 더 민감).
-- `week3/results_sobel/sobel_y_abs.png`
+- <img width="560" height="315" alt="Image" src="https://github.com/user-attachments/assets/a79a70b1-b844-477b-ac88-d9bfa286e104" />
+
   - y축 방향 소벨 결과(가로 경계에 더 민감).
 
 ### 최종 결과물
-- `week3/results_sobel/sobel_magnitude_abs.png`
+- <img width="560" height="315" alt="Image" src="https://github.com/user-attachments/assets/582a5cac-3d85-462b-8ef7-fe35c41524a8" />
+
   - x/y 기울기를 결합한 최종 에지 강도 이미지.
-- `week3/results_sobel/sobel_visualization.png`
+- <img width="1800" height="750" alt="Image" src="https://github.com/user-attachments/assets/f33e929e-18f5-405f-9eff-a4b0c8d9aae0" />
+
   - 원본 이미지와 최종 에지 강도 이미지를 나란히 배치한 시각화 결과.
 
 ### 코드 (주석 포함)
@@ -150,13 +154,16 @@ print(f"Saved results to: {RESULT_DIR}")
 - Matplotlib를 이용해 원본 이미지와 직선이 그려진 이미지를 나란히 시각화한다.
 
 ### 중간 결과물
-- `week3/results_canny_hough/canny_edges.png`
+- <img width="650" height="487" alt="Image" src="https://github.com/user-attachments/assets/2d830277-73f6-4cd5-8776-6620a8be07bd" />
+
   - 캐니 에지 검출 결과로, 허프 변환의 입력으로 사용되는 이진 에지 맵.
 
 ### 최종 결과물
-- `week3/results_canny_hough/hough_lines_overlay.png`
+- <img width="650" height="487" alt="Image" src="https://github.com/user-attachments/assets/56ac1789-95f8-4f95-b04c-bbee2436e420" />
+
   - 원본 이미지 위에 검출 직선을 빨간색으로 그린 최종 검출 이미지.
-- `week3/results_canny_hough/canny_hough_visualization.png`
+- <img width="1800" height="750" alt="Image" src="https://github.com/user-attachments/assets/5b287f77-669e-4923-bb87-5a53a3d02a05" />
+
   - 원본 이미지와 직선 검출 결과를 좌우로 배치한 비교 시각화 이미지.
   
 - 콘솔 출력 결과:
@@ -314,15 +321,19 @@ print(f"Saved results to: {RESULT_DIR}")
 - Matplotlib로 원본 이미지, 마스크 이미지, 배경 제거 이미지를 나란히 시각화한다.
 
 ### 중간 결과물
-- `week3/results_grabcut/grabcut_rect_preview.png`
+- <img width="1280" height="960" alt="Image" src="https://github.com/user-attachments/assets/5796270e-39ad-40d3-b98f-fb4755280b5f" />
+
   - GrabCut 초기화에 사용된 사각형 영역을 원본 이미지 위에 표시한 미리보기 이미지.
-- `week3/results_grabcut/grabcut_mask.png`
+- <img width="1280" height="960" alt="Image" src="https://github.com/user-attachments/assets/d8f9bba1-3056-47a3-bb3b-2ede6fccb7ac" />
+
   - GrabCut 결과에서 전경을 255, 배경을 0으로 나타낸 바이너리 마스크 이미지.
 
 ### 최종 결과물
-- `week3/results_grabcut/grabcut_extracted.png`
+- <img width="1280" height="960" alt="Image" src="https://github.com/user-attachments/assets/91c47625-1186-4813-ad71-4e5d65f15abc" />
+
   - 마스크를 원본 이미지에 적용해 배경을 제거하고 객체만 남긴 최종 추출 이미지.
-- `week3/results_grabcut/grabcut_visualization.png`
+- <img width="2250" height="750" alt="Image" src="https://github.com/user-attachments/assets/e7d981a2-69b9-42d8-a405-27d7b9dcad65" />
+
   - 원본, 마스크, 배경 제거 결과를 1행 3열로 나란히 배치한 최종 시각화 이미지.
 
 - 콘솔 출력 결과:
