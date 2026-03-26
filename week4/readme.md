@@ -10,16 +10,24 @@
 - `flags=cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS`를 사용해 특징점의 방향/크기 정보를 함께 표시한다.
 
 ### 중간 결과물 (설명 포함)
-- `week4/results_sift/sift_keypoints_simple.jpg`
+- ![Image](https://github.com/user-attachments/assets/33fb8cb5-d41e-474b-abd6-7a27945376c0)
+  
   - 점 형태 중심의 단순 특징점 시각화 이미지.
-- `week4/results_sift/sift_summary.txt`
-  - 입력 이미지 경로, 검출 특징점 개수, 기술자 행렬 크기를 기록한 텍스트 요약.
+    
+- "Detected keypoints: 400
+  Descriptor shape: (400, 128)"
+  - 입력 이미지 경로, 검출 특징점 개수, 기술자 행렬 크기를 기록한 텍스트.
 
 ### 최종 결과물 (설명 포함)
-- `week4/results_sift/sift_keypoints_rich.jpg`
+- ![Image](https://github.com/user-attachments/assets/08b71f0f-bf5a-44d7-b7f1-b7d2527dffd1)
+  
   - 특징점의 방향과 스케일(크기)까지 표시한 최종 특징점 시각화 이미지.
-- `week4/results_sift/sift_visualization.png`
+
+
+- <img width="1800" height="750" alt="Image" src="https://github.com/user-attachments/assets/5e9a62cf-e016-4a31-97dd-81946353e1c5" />
+
   - 원본 이미지와 Rich 특징점 이미지를 좌우로 배치한 최종 비교 시각화.
+    
 - 콘솔 출력 결과:
 ```text
 Input image: C:\Projects\Computer_vision\images\mot_color70.jpg
@@ -169,16 +177,25 @@ print(f"Saved results to: {RESULT_DIR}")
 - 현재 워크스페이스에는 `mot_color80.jpg`가 없어, 코드에서는 해당 경로를 우선 시도한 뒤 실제 존재하는 `mot_color83.jpg`를 대체 사용하도록 처리했다.
 
 ### 중간 결과물 (설명 포함)
-- `week4/results_sift_match/sift_match_preview.jpg`
+- ![Image](https://github.com/user-attachments/assets/1b53b3fb-159d-43aa-8396-8167ec2bb236)
+  
   - 비율 테스트를 통과한 매칭 중 상위 120개만 표시한 중간 점검용 이미지.
-- `week4/results_sift_match/sift_match_summary.txt`
+    
+- "Keypoints image1: 500
+  Keypoints image2: 500
+  KNN pairs: 500
+  Good matches (ratio<0.75): 124"
   - 입력 경로, 특징점 개수, KNN 쌍 수, 최종 매칭 수를 기록한 요약 텍스트.
 
 ### 최종 결과물 (설명 포함)
-- `week4/results_sift_match/sift_match_final.jpg`
+- ![Image](https://github.com/user-attachments/assets/c29a5546-899f-4aa7-8204-9e9ab6c18ae6)
+  
   - 비율 테스트를 통과한 전체 좋은 매칭 결과를 표시한 최종 매칭 이미지.
-- `week4/results_sift_match/sift_match_visualization.png`
+    
+- <img width="2100" height="900" alt="Image" src="https://github.com/user-attachments/assets/a8c54f88-c407-4365-a9db-80a6c4b2aa11" />
+
   - 중간 결과(Top 120)와 최종 결과(전체 good matches)를 나란히 비교한 시각화.
+    
 - 콘솔 출력 결과:
 ```text
 Image1: C:\Projects\Computer_vision\images\mot_color70.jpg
@@ -393,20 +410,37 @@ print(f"Saved results to: {RESULT_DIR}")
 - 특징점 매칭 결과와 정렬 결과를 나란히 시각화하여 정합 품질을 비교한다.
 
 ### 중간 결과물 (설명 포함)
-- `week4/results_homography/homography_matching_preview.jpg`
+- ![Image](https://github.com/user-attachments/assets/c6cba6ea-e554-4935-b2e6-89c508a022aa)
+  
   - 좋은 매칭점 중 상위 120개만 시각화한 중간 점검 이미지.
-- `week4/results_homography/homography_matching_inliers.jpg`
+    
+- ![Image](https://github.com/user-attachments/assets/b7b977df-35e6-4ee2-aedb-89222e16df93)
+  
   - RANSAC inlier로 판정된 매칭만 표시한 정제 매칭 결과.
-- `week4/results_homography/homography_warped.jpg`
+    
+- ![Image](https://github.com/user-attachments/assets/783e403e-b05f-4e36-933f-302b3e722a6a)
+  
   - `img2.jpg`를 호모그래피로 투영(warp)한 중간 결과 이미지.
-- `week4/results_homography/homography_summary.txt`
+    
+- "Keypoints image1: 800
+  Keypoints image2: 800
+  Good matches: 230
+  Inlier matches (RANSAC): 219
+  Homography matrix:
+  [[ 6.148873e-01  2.853989e-02  2.535696e+02]
+   [-1.051639e-01  8.683260e-01  2.263036e+01]
+   [-5.347521e-04  2.342416e-06  1.000000e+00]]"
   - 특징점 수, 좋은 매칭 수, inlier 수, 호모그래피 행렬을 기록한 텍스트 요약.
 
 ### 최종 결과물 (설명 포함)
-- `week4/results_homography/homography_aligned.jpg`
+- ![Image](https://github.com/user-attachments/assets/4cbfe249-6247-404e-8edc-29cf16c24f3b)
+  
   - warp된 이미지와 기준 이미지를 같은 좌표계에서 정렬/합성한 최종 결과.
-- `week4/results_homography/homography_visualization.png`
+    
+- <img width="2400" height="900" alt="Image" src="https://github.com/user-attachments/assets/cf37a77f-ba5b-4e60-affd-a42086989eab" />
+
   - 좌측에 매칭 결과(Top 120), 우측에 정렬 결과(Aligned)를 배치한 최종 보고용 시각화.
+    
 - 콘솔 출력 결과:
 ```text
 Image1: C:\Projects\Computer_vision\images\img1.jpg
