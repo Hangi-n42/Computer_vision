@@ -1,0 +1,3 @@
+Input image: C:\Projects\Computer_vision\images\mot_color70.jpg
+Detected keypoints: 400
+Descriptor shape: (400, 128)

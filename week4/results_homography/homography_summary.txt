@@ -1,0 +1,10 @@
+Image1: C:\Projects\Computer_vision\images\img1.jpg
+Image2: C:\Projects\Computer_vision\images\img2.jpg
+Keypoints image1: 800
+Keypoints image2: 800
+Good matches: 230
+Inlier matches (RANSAC): 219
+Homography matrix:
+[[ 6.148873e-01  2.853989e-02  2.535696e+02]
+ [-1.051639e-01  8.683260e-01  2.263036e+01]
+ [-5.347521e-04  2.342416e-06  1.000000e+00]]

@@ -1,0 +1,6 @@
+Image1: C:\Projects\Computer_vision\images\mot_color70.jpg
+Image2: C:\Projects\Computer_vision\images\mot_color83.jpg
+Keypoints image1: 500
+Keypoints image2: 500
+KNN pairs: 500
+Good matches (ratio<0.75): 124
