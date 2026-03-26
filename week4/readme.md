@@ -49,12 +49,6 @@ INPUT_IMAGE_PATH = SCRIPT_DIR.parent.parent / "images" / "mot_color70.jpg"
 
 RESULT_DIR.mkdir(parents=True, exist_ok=True)
 
-if not INPUT_IMAGE_PATH.exists():
-    raise FileNotFoundError(
-        "입력 이미지를 찾지 못했습니다. "
-        "확인 경로: C:/Projects/Computer_vision/images/mot_color70.jpg"
-    )
-
 # OpenCV로 원본 컬러 이미지를 불러온다.
 color_bgr = cv.imread(str(INPUT_IMAGE_PATH))
 
@@ -220,23 +214,6 @@ REQUESTED_IMAGE2_PATH = SCRIPT_DIR.parent.parent / "images" / "mot_color80.jpg"
 FALLBACK_IMAGE2_PATH = SCRIPT_DIR.parent.parent / "images" / "mot_color83.jpg"
 
 RESULT_DIR.mkdir(parents=True, exist_ok=True)
-
-if not IMAGE1_PATH.exists():
-  raise FileNotFoundError(
-    "첫 번째 입력 이미지를 찾지 못했습니다. "
-    "확인 경로: C:/Projects/Computer_vision/images/mot_color70.jpg"
-  )
-
-if REQUESTED_IMAGE2_PATH.exists():
-  IMAGE2_PATH = REQUESTED_IMAGE2_PATH
-elif FALLBACK_IMAGE2_PATH.exists():
-  IMAGE2_PATH = FALLBACK_IMAGE2_PATH
-else:
-  raise FileNotFoundError(
-    "두 번째 입력 이미지를 찾지 못했습니다. "
-    "확인 경로: C:/Projects/Computer_vision/images/mot_color80.jpg, "
-    "C:/Projects/Computer_vision/images/mot_color83.jpg"
-  )
 
 # 두 입력 이미지를 OpenCV로 컬러 형태로 불러온다.
 img1_bgr = cv.imread(str(IMAGE1_PATH))
@@ -470,16 +447,6 @@ IMAGE1_PATH = SCRIPT_DIR.parent.parent / "images" / "img1.jpg"
 IMAGE2_PATH = SCRIPT_DIR.parent.parent / "images" / "img2.jpg"
 
 RESULT_DIR.mkdir(parents=True, exist_ok=True)
-
-# 과제에서 지정한 첫 번째 입력 이미지 존재 여부를 확인한다.
-if not IMAGE1_PATH.exists():
-  # 지정 이미지가 없으면 오류를 발생시켜 즉시 종료한다.
-  raise FileNotFoundError(f"입력 이미지를 찾지 못했습니다: {IMAGE1_PATH}")
-
-# 과제에서 지정한 두 번째 입력 이미지 존재 여부를 확인한다.
-if not IMAGE2_PATH.exists():
-  # 지정 이미지가 없으면 오류를 발생시켜 즉시 종료한다.
-  raise FileNotFoundError(f"입력 이미지를 찾지 못했습니다: {IMAGE2_PATH}")
 
 # 첫 번째 이미지를 컬러(BGR)로 불러온다.
 img1_bgr = cv.imread(str(IMAGE1_PATH))
