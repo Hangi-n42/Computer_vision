@@ -10,16 +10,16 @@
 - 모델을 훈련시키고 테스트 세트에서 정확도를 평가한다.
 
 ### 중간 결과물 (설명 포함)
-- `week5/results_classification/classification_training_curve.png`
+- <img width="1800" height="750" alt="Image" src="https://github.com/user-attachments/assets/ffa105f1-7442-4c01-976a-2fa9c912e141" />
+
   - 에포크별 학습 정확도, 검증 정확도, 학습 손실, 검증 손실 변화를 시각화한 중간 결과물이다.
   - 모델이 학습되면서 성능이 점차 향상되는지 확인할 수 있다.
 - `week5/results_classification/classification_summary.txt`
-  - 모델 구조, 훈련 샘플 수, 테스트 샘플 수, 학습/검증 정확도, 테스트 정확도와 손실을 기록한 요약 파일이다.
-- `week5/results_classification/classification_model.keras`
-  - 훈련이 끝난 뒤 저장한 최종 모델 파일이다.
+  - 모델 구조, 훈련 샘플 수, 테스트 샘플 수, 학습/검증 정확도, 테스트 정확도와 손실을 기록한 요약.
 
 ### 최종 결과물 (설명 포함)
-- `week5/results_classification/classification_prediction_grid.png`
+- <img width="1800" height="1200" alt="Image" src="https://github.com/user-attachments/assets/12c8fd06-85d2-4a0f-9b09-e38d32faad5a" />
+
   - 테스트 이미지 16개에 대해 실제 정답과 예측값을 나란히 확인할 수 있는 최종 결과물이다.
   - 모델이 숫자를 얼마나 정확하게 분류했는지 시각적으로 확인할 수 있다.
 - 콘솔 출력 결과:
@@ -251,10 +251,12 @@ print(f"Saved results to: {RESULT_DIR}")
 
 
 ### 중간 결과물 (설명 포함)
-- `week5/results_cnn/cnn_dataset_preview.png`
+- <img width="1500" height="1500" alt="Image" src="https://github.com/user-attachments/assets/8165da58-8f94-4486-8d3a-da3c6f618fd5" />
+
   - CIFAR-10 샘플 이미지를 클래스 이름과 함께 확인할 수 있는 데이터셋 미리보기 이미지이다.
   - 입력 데이터가 어떤 형태인지, 그리고 10개 클래스가 어떻게 구성되는지 확인하는 데 도움이 된다.
-- `week5/results_cnn/cnn_training_curve.png`
+- <img width="1800" height="750" alt="Image" src="https://github.com/user-attachments/assets/8dbac39f-f9b0-4a07-b91e-fa67b4602b60" />
+
   - 에포크별 학습 손실/정확도와 검증 손실/정확도 변화를 시각화한 중간 결과물이다.
   - CNN이 학습되며 성능이 점차 개선되는지 확인할 수 있다.
 - `week5/cnn_run_epoch20.log`
@@ -265,7 +267,8 @@ print(f"Saved results to: {RESULT_DIR}")
   - CUDA GPU에서 학습한 CNN 가중치를 저장한 모델 파일이다.
 
 ### 최종 결과물 (설명 포함)
-- `week5/results_cnn/cnn_dog_prediction.png`
+- <img width="1800" height="750" alt="Image" src="https://github.com/user-attachments/assets/242cc0e3-2488-4c85-8945-aaac681900f0" />
+
   - `dog.jpg`에 대한 예측 결과와 상위 5개 클래스 확률을 함께 표시한 최종 결과물이다.
   - 모델이 개 이미지에 대해 실제로 `dog` 클래스를 가장 높게 예측하는지 확인할 수 있다.
 - 콘솔 출력 결과:
