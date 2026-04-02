@@ -1,0 +1,58 @@
+CIFAR-10 CNN Classifier
+
+Device: cuda
+GPU Name: NVIDIA GeForce GTX 1650 Ti
+
+Model Architecture:
+CIFAR10CNN(
+  (features): Sequential(
+    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (5): ReLU(inplace=True)
+    (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (7): Dropout(p=0.25, inplace=False)
+    (8): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (9): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (10): ReLU(inplace=True)
+    (11): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (12): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (13): ReLU(inplace=True)
+    (14): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (15): Dropout(p=0.3, inplace=False)
+    (16): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (17): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (18): ReLU(inplace=True)
+    (19): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (20): Dropout(p=0.35, inplace=False)
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=4096, out_features=512, bias=True)
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU(inplace=True)
+    (3): Dropout(p=0.5, inplace=False)
+    (4): Linear(in_features=512, out_features=256, bias=True)
+    (5): ReLU(inplace=True)
+    (6): Dropout(p=0.4, inplace=False)
+    (7): Linear(in_features=256, out_features=10, bias=True)
+  )
+)
+
+Train samples: 45000
+Validation samples: 5000
+Test samples: 10000
+Final train loss: 0.7337
+Final train accuracy: 0.8327
+Final validation loss: 0.6402
+Final validation accuracy: 0.8662
+Test loss: 0.6553
+Test accuracy: 0.8584
+Dog image prediction: dog
+Top-5 dog image probabilities:
+  dog: 0.9776
+  bird: 0.0115
+  cat: 0.0049
+  ship: 0.0024
+  horse: 0.0011
