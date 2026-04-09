@@ -11,20 +11,27 @@
 - 입력 비디오는 `images/slow_traffic_small.mp4`, YOLO 설정/가중치는 `images/yolov3.cfg`, `images/yolov3.weights`를 사용한다.
 
 ### 중간 결과물 (설명 포함)
-- `week6/results_sort/sort_mid_detection_frame.jpg`
+- ![Image](https://github.com/user-attachments/assets/b257b3a2-d06f-4de3-be81-6b17f11ccb1b)
+  
   - 프레임 30에서 저장되는 중간 결과 이미지이다.
   - YOLOv3의 원시 검출 결과(DET 라벨, 클래스명, confidence, bbox)를 확인하여 검출 품질을 점검할 수 있다.
-- `week6/results_sort/sort_mid_tracking_frame.jpg`
+- ![Image](https://github.com/user-attachments/assets/ed16171e-8780-4163-b34a-cdc990b39375)
+  
   - 프레임 60에서 저장되는 중간 결과 이미지이다.
   - SORT 연관 이후 부여된 ID와 함께 트랙이 안정적으로 유지되는지 확인할 수 있다.
-- `week6/results_sort/sort_summary.txt`
+- 'rocessed frames: 914
+Unique track ids: 62
+Average processing FPS: 2.87
+Detector backend: cv.dnn.DNN_BACKEND_OPENCV
+Detector target: cv.dnn.DNN_TARGET_CPU'
   - 처리 프레임 수, 생성된 고유 ID 수, 평균 처리 FPS, CUDA 백엔드/타깃 사용 정보가 기록된다.
 
 ### 최종 결과물 (설명 포함)
 - `week6/results_sort/sort_tracking_output.mp4`
   - 전체 비디오 구간에서 다중 객체 추적이 적용된 최종 결과 영상이다.
   - 각 객체는 `ID | class | confidence` 형식으로 표시되어 프레임 간 동일 객체 추적 여부를 확인할 수 있다.
-- `week6/results_sort/sort_final_frame.jpg`
+- ![Image](https://github.com/user-attachments/assets/762990bf-92a7-4ea5-833a-4aa9491169a8)
+  
   - 추적 파이프라인의 마지막 처리 프레임 스냅샷이다.
   - 최종 시점에서의 추적 상태와 오버레이 정보를 정적으로 확인할 수 있다.
 
@@ -807,17 +814,25 @@ if __name__ == "__main__":
 - 입력 프레임 전처리는 CUDA 디바이스가 उपलब्ध한 경우 OpenCV CUDA 경로를 우선 시도해 GPU를 활용하도록 구성한다.
 
 ### 중간 결과물 (설명 포함)
-- `week6/results_mediapipe/mediapipe_mid_landmarks_frame.jpg`
+- ![Image](https://github.com/user-attachments/assets/1f7f13e2-0db1-4b7b-8b22-7b24868c2a34)
+
   - 웹캠 처리 중간 시점에서 저장되는 중간 결과 이미지이다.
   - 얼굴 랜드마크가 실시간으로 추출되고 점 형태로 시각화되는 상태를 확인할 수 있다.
-- `week6/results_mediapipe/mediapipe_summary.txt`
-  - 처리 프레임 수, 얼굴이 검출된 프레임 수, CUDA 전처리 사용 여부, 랜드마크 개수 정보가 기록된 요약 파일이다.
+- 'Processed frames: 120
+Max frames: 120
+Face-present frames: 120
+CUDA preprocessing: disabled
+OpenCV CUDA devices: 0
+FaceMesh module: mediapipe.python.solutions.face_mesh.FaceMesh
+Landmark count per face: 468'
+  - 처리 프레임 수, 얼굴이 검출된 프레임 수, CUDA 전처리 사용 여부, 랜드마크 개수 정보가 기록된 요약이다.
 
 ### 최종 결과물 (설명 포함)
 - `week6/results_mediapipe/mediapipe_face_mesh_output.mp4`
   - 웹캠 전체 처리 과정이 저장된 최종 결과 영상이다.
   - 실시간 얼굴 랜드마크 시각화가 프레임 단위로 유지되는 모습을 확인할 수 있다.
-- `week6/results_mediapipe/mediapipe_final_landmarks_frame.jpg`
+- ![Image](https://github.com/user-attachments/assets/2cf00c01-f5c9-4be3-b4f2-2a29af0e9399)
+  
   - 프로그램 종료 직전의 마지막 처리 프레임을 저장한 최종 스냅샷이다.
   - 마지막 시점의 랜드마크 분포와 화면 오버레이를 정적으로 확인할 수 있다.
 
