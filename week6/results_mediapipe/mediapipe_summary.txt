@@ -1,0 +1,12 @@
+Mediapipe FaceMesh Summary
+Camera index: 0
+Output video: C:\Projects\Computer_vision\Computer_vision\week6\results_mediapipe\mediapipe_face_mesh_output.mp4
+Mid frame: C:\Projects\Computer_vision\Computer_vision\week6\results_mediapipe\mediapipe_mid_landmarks_frame.jpg
+Final frame: C:\Projects\Computer_vision\Computer_vision\week6\results_mediapipe\mediapipe_final_landmarks_frame.jpg
+Processed frames: 120
+Max frames: 120
+Face-present frames: 120
+CUDA preprocessing: disabled
+OpenCV CUDA devices: 0
+FaceMesh module: mediapipe.python.solutions.face_mesh.FaceMesh
+Landmark count per face: 468

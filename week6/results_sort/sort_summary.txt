@@ -1,0 +1,13 @@
+SORT Multi-Object Tracking Summary
+Input video: C:\Projects\Computer_vision\images\slow_traffic_small.mp4
+YOLO cfg: C:\Projects\Computer_vision\images\yolov3.cfg
+YOLO weights: C:\Projects\Computer_vision\images\yolov3.weights
+Output video: C:\Projects\Computer_vision\Computer_vision\week6\results_sort\sort_tracking_output.mp4
+Mid detection frame: C:\Projects\Computer_vision\Computer_vision\week6\results_sort\sort_mid_detection_frame.jpg
+Mid tracking frame: C:\Projects\Computer_vision\Computer_vision\week6\results_sort\sort_mid_tracking_frame.jpg
+Final frame: C:\Projects\Computer_vision\Computer_vision\week6\results_sort\sort_final_frame.jpg
+Processed frames: 914
+Unique track ids: 62
+Average processing FPS: 2.87
+Detector backend: cv.dnn.DNN_BACKEND_OPENCV
+Detector target: cv.dnn.DNN_TARGET_CPU
